@@ -1,0 +1,85 @@
+html {
+    font-size: 16px;
+}
+
+.formularioContacto {
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.formularioBox {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario input,
+.formulario textarea {
+    font-family: var(--fontBody);
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.2rem;
+    background-color: var(--color-bg-soft);
+    color: var(--color-text-muted);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-text);
+}
+
+.formulario button {
+    margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+     .formularioContacto {
+        padding: 3rem 1.5rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .formularioContacto {
+        padding: 2rem 1rem;
+    }
+
+    .formularioBox {
+        max-width: 100%;
+    }
+
+    .formulario {
+        gap: 0.75rem;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .formulario button {
+        width: 100%;
+        padding: 0.8rem 1rem;
+    }
+
+}

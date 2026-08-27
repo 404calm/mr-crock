@@ -1,0 +1,71 @@
+html{
+    font-size: 16px;
+}
+
+.hero{
+    background-image: url("../assets/factory/main_hero.png");
+}
+
+.card{
+    background-color: var(--color-bg-soft);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 1rem;
+    border: 1px;
+    border-radius: 0.2rem;
+}
+
+.card_title{
+    font-size: 2rem;
+}
+
+.four_cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .four_cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .four_cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+    }
+
+    .card_title {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+     .four_cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .card_title {
+        font-size: 1.6rem;
+    }
+
+}

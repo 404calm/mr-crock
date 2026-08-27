@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Crock</title>
+    <link rel="icon" type="image/png" href="assets/logo/Favicon/16px/MC-Favicon-02.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lexend+Deca:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/producto.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_left">
+            <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="">
+        </div>
+        <div class="header_right">
+            <nav class="menu_nav">
+                <ul class="menu_nav_items">
+                    <li><a href="/index.html">INICIO</a></li>
+                    <li><a href="/producto.html">PRODUCTOS</a></li>
+                    <li><a href="/clientes.html">CLIENTES</a></li>
+                </ul>
+                <span class="material-symbols-outlined menu-btn">menu</span>
+            </nav>
+            <a href="contacto.html" class="main_btn">CONTACTO</a>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero_content">
+                <h1 class="hero_title">Productos</h1>
+            </div>
+        </section>
+        <section class="two_column">
+            <div class="column_left">
+                <h2 class="section_title">Nuestro <span>Proceso</span></h2>
+            </div>
+            <div class="column_right">
+                <p>Nuestro proceso comienza siempre entendiendo a cada cliente y su contexto. Nos involucramos en sus
+                    necesidades y objetivos para inspirar soluciones que realmente funcionen en su operación. Combinamos
+                    experiencia técnica y conocimiento del sector. <span> A partir de ahí, creamos nuevas posibilidades para transformarlas en productos listos para vender y
+                    disfrutar. Cada creación nace de un equilibrio entre tradición y precisión, donde el saber hacer se
+                    refleja en cada detalle.</span><span> Acompañamos a nuestros clientes hasta el final, asegurándonos de que reciban su pedido. En el 2025 un
+                    97% de nuestros pedidos llegaron en tiempo y forma a destino.</span></p>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="banner_content">
+                <h3 class="banner_title">Catalogo</h3>
+            </div>
+            <div class="product_list">
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Bocadillos Ibéricos</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dl class="product_specs">
+
+                            </dl>
+                            <dt>Pan recomendado:</dt>
+                            <dd>Pan de Cristal Mr. Crock</dd>
+                            <dt>Elige tu proteína:</dt>
+                            <dd>Paleta de cebo ibérica, Chorizo, Salchichón,Lomo</dd>
+                            <dt>Convertirlo en premium:</dt>
+                            <dd>Gama Joselito</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>150gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Hornear 3:30 min a 230º</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/iberico/a-12.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Bocadillos Calientes</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Pan de Cristal, Pan mollete, Pan masa madre</dd>
+                            <dt>Elige tu proteína:</dt>
+                            <dd>Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo</dd>
+                            <dt>Añade más Ingredientes:</dt>
+                            <dd>Queso, pimiento, Tomate deshidratado</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>200-250 gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Hornear 3:30 min a 230º</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/caliente/a-15.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama listo para consumo directo</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Mollete, Pan Cristal, Pan Bocata, Pan bagel</dd>
+                            <dt>Elige tu proteína:</dt>
+                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
+                            </dd>
+                            <dt>Añade más Ingredientes:</dt>
+                            <dd>Queso, cebolla caramelizada, pimiento, tomate deshidratado</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>150-250 gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/directo/a-26.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Focaccias</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Focaccia Mediterranea con oliva negra o Plain Focaccia</dd>
+                            <dt>Elige tu proteína:</dt>
+                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
+                            </dd>
+                            <dt>Añade más Ingredientes:</dt>
+                            <dd>Queso crema, tomate deshidratado, rúcula, Pesto, tapenade aceitunas.</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>150gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/focaccia/a-25.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Hamburguesas y Hot Dogs</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Pan brioche mantequilla</dd>
+                            <dt>Elige tu proteína:</dt>
+                            <dd>Carne vacuno o Salchicha frankfurt</dd>
+                            <dt>Añade más Ingredientes:</dt>
+                            <dd>Cebolla caramelizada, queso fundido, bacon, pepinillo</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>150gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/hamburger/a-34.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Paninis</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Pan panini</dd>
+                            <dt>Elige los ingredientes:</dt>
+                            <dd>Vegana, Carnes frías, vegetales, cuatro quesos, mix…</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>180-200 gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/panini/a-29.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama de Sandwiches</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Pan Blanco, Pan de amapolas, Pan sin corteza</dd>
+                            <dt>Elige los ingredientes:</dt>
+                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
+                            </dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>150-220 gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>11 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/sandwich/a-39.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product_category">
+                    <h4 class="product_title">Gama Sweet bites</h4>
+                    <div class="product_content">
+                        <div class="product_text">
+                            <dt>Pan recomendado:</dt>
+                            <dd>Focaccia Mediterránea/plain, Croissant</dd>
+                            <dt>Ingredientes:</dt>
+                            <dd>Nutella - Crema de avellanas</dd>
+                            <dt>Convertirlo en premium:</dt>
+                            <dd>Gama Joselito</dd>
+                            <dt>Peso apróx:</dt>
+                            <dd>90-120 gr</dd>
+                            <dt>Recomendaciones uso:</dt>
+                            <dd>Listo para consumo directo / Hornear 3:30 min a 230º</dd>
+                            <dt>Caducidad:</dt>
+                            <dd>21 días</dd>
+                        </div>
+                        <div class="slider">
+                            <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
+                            <img id="sliderImage" src="assets/product/sweet/a-43.jpg" alt="Gallery image">
+                            <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_left">
+            <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
+        </div>
+        <div class="footer_center">
+            <dd>Mr.Crock es una marca registrada de Catering de Suministros S.L.</dd>
+
+        </div>
+        <div class="footer_right">
+            <dd>Contacto</dd>
+            <dd>Barrio Zudubiarte 01409, Okondo, Álava, España</dd>
+        </div>
+    </footer>
+</body>
+</html>
