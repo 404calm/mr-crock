@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,40 +20,121 @@
 
 <body>
     <header>
-        <div class="header_left">
-            <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="">
+        <div class="container header_inner">
+            <div class="header_left">
+                <a class="logo_link" href="./index.html" aria-label="Mr. Crock - Inicio">
+                    <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="Mr. Crock">
+                </a>
+            </div>
+            <div class="header_right">
+                <nav class="menu_nav" aria-label="Navegación principal">
+                    <ul class="menu_nav_items" id="main-navigation">
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./producto.html">PRODUCTOS</a></li>
+                        <li><a href="./clientes.html">CLIENTES</a></li>
+                    </ul>
+                    <button class="material-symbols-outlined menu-btn" type="button"
+                        aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">menu</button>
+                </nav>
+                <a href="contacto.html" class="main_btn header_cta">CONTACTO</a>
+            </div>
         </div>
-        <div class="header_right">
-            <nav class="menu_nav">
-                <ul class="menu_nav_items">
-                    <li><a href="./index.html">INICIO</a></li>
-                    <li><a href="./producto.html">PRODUCTOS</a></li>
-                    <li><a href="./clientes.html">CLIENTES</a></li>
-                </ul>
-                <span class="material-symbols-outlined menu-btn">menu</span>
-            </nav>
-            <a href="contacto.html" class="main_btn">CONTACTO</a>
     </header>
     <main>
         <section class="hero">
-            <div class="hero_content">
+            <div class="hero_content container">
                 <h1 class="hero_title">Productos</h1>
             </div>
         </section>
-        <section class="two_column">
+        <section class="two_column container">
             <div class="column_left">
                 <h2 class="section_title">Nuestro <span>Proceso</span></h2>
             </div>
             <div class="column_right">
                 <p>Nuestro proceso comienza siempre entendiendo a cada cliente y su contexto. Nos involucramos en sus
                     necesidades y objetivos para inspirar soluciones que realmente funcionen en su operación. Combinamos
-                    experiencia técnica y conocimiento del sector. <span> A partir de ahí, creamos nuevas posibilidades para transformarlas en productos listos para vender y
-                    disfrutar. Cada creación nace de un equilibrio entre tradición y precisión, donde el saber hacer se
-                    refleja en cada detalle.</span><span> Acompañamos a nuestros clientes hasta el final, asegurándonos de que reciban su pedido. En el 2025 un
-                    97% de nuestros pedidos llegaron en tiempo y forma a destino.</span></p>
+                    experiencia técnica y conocimiento del sector. <span> A partir de ahí, creamos nuevas posibilidades
+                        para transformarlas en productos listos para vender y
+                        disfrutar. Cada creación nace de un equilibrio entre tradición y precisión, donde el saber hacer
+                        se
+                        refleja en cada detalle.</span><span> Acompañamos a nuestros clientes hasta el final,
+                        asegurándonos de que reciban su pedido. En el 2025 un
+                        97% de nuestros pedidos llegaron en tiempo y forma a destino.</span></p>
             </div>
         </section>
-        <section class="banner">
+        <section class="product_considerations" aria-labelledby="consideraciones-title">
+            <div class="container">
+                <h2 class="considerations_title" id="consideraciones-title">Consideraciones generales</h2>
+                <div class="considerations_grid">
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: PESO -->
+                        </div>
+                        <div class="product_spec_content">
+                            <h3>Peso por bocadillo</h3>
+                            <p>Desde 90 gramos hasta 250 gr.</p>
+                        </div>
+                    </article>
+
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: ENTREGA -->
+                        </div>
+                        <div class="product_spec_content">
+                            <h3>Entrega</h3>
+                            <p>En toda la península en un máximo de 72 horas.</p>
+                        </div>
+                    </article>
+
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: CONSERVACIÓN EN FRÍO -->
+                        </div>
+                        <div class="product_spec_content">
+                            <h3>Conservación en frío</h3>
+                            <p>De 0 °C a 4 °C.</p>
+                        </div>
+                    </article>
+
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: PEDIDO MÍNIMO -->
+                        </div>
+                        <div class="product_spec_content">
+                            <h3>Pedido mínimo</h3>
+                            <p>Recomendamos pedidos de un mínimo de 100 unidades.</p>
+                        </div>
+                    </article>
+
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: CADUCIDAD -->
+                        </div>
+                        <div class="product_spec_content product_spec_content--stacked">
+                            <div>
+                                <h3>Caducidad en frío</h3>
+                                <p>Desde 11 días hasta 21 días.</p>
+                            </div>
+                            <div>
+                                <h3>Caducidad en congelado</h3>
+                                <p>Hasta 1 año.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product_spec">
+                        <div class="product_spec_icon" aria-hidden="true">
+                            <!-- INSERTAR ICONO: ALÉRGENOS -->
+                        </div>
+                        <div class="product_spec_content">
+                            <h3>Alérgenos</h3>
+                            <p>Consulta la tabla de alérgenos antes del consumo de los alimentos.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="banner container">
             <div class="banner_content">
                 <h3 class="banner_title">Catalogo</h3>
             </div>
@@ -61,74 +143,56 @@
                     <h4 class="product_title">Gama de Bocadillos Ibéricos</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dl class="product_specs">
-
-                            </dl>
-                            <dt>Pan recomendado:</dt>
-                            <dd>Pan de Cristal Mr. Crock</dd>
-                            <dt>Elige tu proteína:</dt>
-                            <dd>Paleta de cebo ibérica, Chorizo, Salchichón,Lomo</dd>
-                            <dt>Convertirlo en premium:</dt>
-                            <dd>Gama Joselito</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>150gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Hornear 3:30 min a 230º</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Nuestra selección de bocadillos ibéricos está pensada para quienes buscan <b>calidad y
+                                    tradición.</b></p>
+                            <p>En esta gama, ponemos especial atención en lo más importante: la selección
+                                del iberico. Elegimos cuidadosamente el producto ibérico, buscando calidad, sabor y
+                                equilibrio, porque que es el ingrediente que marca la diferencia.</p>
+                            <p>Convierte tu bocadillo
+                                en premium con nuestra gama Joselito.</p>
+                            <p>Para una experiencia de consumo completa,
+                                recomendamos acompañarlos con tomate y aceite.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/iberico/a-12.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/iberico 2.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
                 </article>
                 <article class="product_category">
-                    <h4 class="product_title">Gama de Bocadillos Calientes</h4>
+                    <h4 class="product_title">Gama de Bocadillos Clasicos</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Pan de Cristal, Pan mollete, Pan masa madre</dd>
-                            <dt>Elige tu proteína:</dt>
-                            <dd>Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo</dd>
-                            <dt>Añade más Ingredientes:</dt>
-                            <dd>Queso, pimiento, Tomate deshidratado</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>200-250 gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Hornear 3:30 min a 230º</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Nuestra gama original, la que dio comienzo a Mr. Crock hace ya 35 años. Recetas que han
+                                acompañado nuestra historia desde el principio y que, si después de todo este tiempo
+                                seguimos elaborándolas, es porque están muy buenas. Una selección de bocadillos
+                                calientes, sabrosos y contundentes, pensados para disfrutar recién calentados y ofrecer
+                                una experiencia de consumo deliciosa. Recetas de toda la vida que combinan ingredientes
+                                de calidad y sabores que nunca fallan y que conquistan desde el primer bocado. 35 años
+                                haciendo los clásicos. Por algo será.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/caliente/a-15.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/classic 2.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
                 </article>
                 <article class="product_category">
-                    <h4 class="product_title">Gama listo para consumo directo</h4>
+                    <h4 class="product_title">Gama Ready-to-eat</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Mollete, Pan Cristal, Pan Bocata, Pan bagel</dd>
-                            <dt>Elige tu proteína:</dt>
-                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
-                            </dd>
-                            <dt>Añade más Ingredientes:</dt>
-                            <dd>Queso, cebolla caramelizada, pimiento, tomate deshidratado</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>150-250 gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Bocadillos pensados para <b>consumir directamente,</b> sin necesidad de preparación. <b>Abrir y
+                                disfrutar.</b></p> 
+                                <p>Ideal para festivales, eventos y puntos de venta sin horno, así como para
+                                aquellos establecimientos donde el consumidor puede comprar el producto y consumirlo más
+                                tarde. Una gama pensada para aquellos consumidores que buscan una opción práctica y
+                                rápida.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/directo/a-26.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/ready_to_eat.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
@@ -137,23 +201,17 @@
                     <h4 class="product_title">Gama de Focaccias</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Focaccia Mediterranea con oliva negra o Plain Focaccia</dd>
-                            <dt>Elige tu proteína:</dt>
-                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
-                            </dd>
-                            <dt>Añade más Ingredientes:</dt>
-                            <dd>Queso crema, tomate deshidratado, rúcula, Pesto, tapenade aceitunas.</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>150gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Nuestra gama de focaccias tiernas, sabrosas y llenas de personalidad combina un pan de
+                                textura esponjosa y un exterior ligeramente crujiente con rellenos e ingredientes
+                                cuidadosamente seleccionados. Recetas atractivas, combinaciones sorprendentes y una
+                                presentación que invita a probarlas. Porque el sabor importa, pero la primera impresión
+                                también. Una propuesta versátil, práctica y fácil de disfrutar, perfecta para consumir
+                                directamente o calentar y disfrutar al máximo. Ideal para un consumidor joven, visual y
+                                que busca propuestas diferentes.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/focaccia/a-25.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/foccacia.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
@@ -162,22 +220,16 @@
                     <h4 class="product_title">Gama de Hamburguesas y Hot Dogs</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Pan brioche mantequilla</dd>
-                            <dt>Elige tu proteína:</dt>
-                            <dd>Carne vacuno o Salchicha frankfurt</dd>
-                            <dt>Añade más Ingredientes:</dt>
-                            <dd>Cebolla caramelizada, queso fundido, bacon, pepinillo</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>150gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Una gama de hamburguesas y hot dogs irresistibles, pensada para disfrutar de todo el
+                                sabor de la comida más popular y desenfadada. Recetas elaboradas con ingredientes de
+                                calidad, combinaciones sabrosas y toppings que marcan la diferencia, en formatos
+                                prácticos y fáciles de preparar. Una propuesta ideal para foodservice, hostelería,
+                                foodtrucks, eventos y puntos de venta, donde el cliente busca una opción rápida y
+                                contundente.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/hamburger/a-34.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/hamburger.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
@@ -186,20 +238,17 @@
                     <h4 class="product_title">Gama de Paninis</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Pan panini</dd>
-                            <dt>Elige los ingredientes:</dt>
-                            <dd>Vegana, Carnes frías, vegetales, cuatro quesos, mix…</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>180-200 gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Paninis calientes, sabrosos y muy apetecibles, pensados para disfrutar recién tostados,
+                                con el pan crujiente por fuera y un relleno caliente, fundente y lleno de sabor.
+                                Combinamos nuestro pan con ingredientes seleccionados y recetas que funcionan, desde los
+                                clásicos que nunca fallan hasta combinaciones más originales, buscando siempre el
+                                equilibrio perfecto entre pan, relleno y queso fundido. Una opción rápida, práctica y
+                                versátil, ideal para hostelería, estaciones de servicio, foodtrucks, eventos y puntos de
+                                venta. Calentar, fundir, disfrutar… y querer repetir.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/panini/a-29.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/panini.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
@@ -208,21 +257,16 @@
                     <h4 class="product_title">Gama de Sandwiches</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Pan Blanco, Pan de amapolas, Pan sin corteza</dd>
-                            <dt>Elige los ingredientes:</dt>
-                            <dd>Jamón, Pavo, Lomo, Pollo natural/ahumado/empanizado, Lomo natural/ahumado, Bacon, Pavo
-                            </dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>150-220 gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>11 días</dd>
+                            <p>Una gama de sándwiches frescos, prácticos y llenos de sabor, pensados para quienes buscan
+                                una opción rápida y cómoda sin renunciar a la calidad. Recetas equilibradas, creando
+                                propuestas fáciles de consumir, apetecibles y perfectas para cualquier momento del día.
+                                Desde los sabores más clásicos hasta combinaciones más actuales, una gama versátil
+                                diseñada para adaptarse a diferentes momentos de consumo y perfiles de consumidor.
+                                Prácticos, frescos y listos para disfrutar.</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/sandwich/a-39.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/sandwich.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
@@ -231,42 +275,52 @@
                     <h4 class="product_title">Gama Sweet bites</h4>
                     <div class="product_content">
                         <div class="product_text">
-                            <dt>Pan recomendado:</dt>
-                            <dd>Focaccia Mediterránea/plain, Croissant</dd>
-                            <dt>Ingredientes:</dt>
-                            <dd>Nutella - Crema de avellanas</dd>
-                            <dt>Convertirlo en premium:</dt>
-                            <dd>Gama Joselito</dd>
-                            <dt>Peso apróx:</dt>
-                            <dd>90-120 gr</dd>
-                            <dt>Recomendaciones uso:</dt>
-                            <dd>Listo para consumo directo / Hornear 3:30 min a 230º</dd>
-                            <dt>Caducidad:</dt>
-                            <dd>21 días</dd>
+                            <p>Nadie puede resistirse a la Nutella. Una gama pensada para poner el broche dulce a
+                                cualquier momento del día, combinando el sabor irresistible de la crema de cacao y
+                                avellanas con nuestros formatos más apetecibles. Paninis de Nutella y croissants
+                                rellenos de Nutella que ofrecen una experiencia cálida, cremosa y reconfortante,
+                                perfecta para desayunos, meriendas o como capricho entre horas. Siempre hay sitio para
+                                algo dulce</p>
                         </div>
                         <div class="slider">
                             <button class="arrow arrow-left" onclick="previousImage()">&#10094;</button>
-                            <img id="sliderImage" src="assets/product/sweet/a-43.jpg" alt="Gallery image">
+                            <img id="sliderImage" src="assets/product/sweet.png" alt="Gallery image">
                             <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
+        <section>
+            <dt>Pan recomendado:</dt>
+            <dd>Focaccia Mediterránea/plain, Croissant</dd>
+            <dt>Ingredientes:</dt>
+            <dd>Nutella - Crema de avellanas</dd>
+            <dt>Convertirlo en premium:</dt>
+            <dd>Gama Joselito</dd>
+            <dt>Peso apróx:</dt>
+            <dd>90-120 gr</dd>
+            <dt>Recomendaciones uso:</dt>
+            <dd>Listo para consumo directo / Hornear 3:30 min a 230º</dd>
+            <dt>Caducidad:</dt>
+            <dd>21 días</dd>
+        </section>
     </main>
     <footer>
-        <div class="footer_left">
-            <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
-        </div>
-        <div class="footer_center">
-            <dd>Mr.Crock es una marca registrada de Catering de Suministros S.L.</dd>
-
-        </div>
-        <div class="footer_right">
-            <dd>Contacto</dd>
-            <dd>Barrio Zudubiarte 01409, Okondo, Álava, España</dd>
+        <div class="container footer_inner">
+            <div class="footer_left">
+                <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
+            </div>
+            <div class="footer_center">
+                <p class="footer_text">Mr.Crock es una marca registrada de Catering de Suministros S.L.</p>
+            </div>
+            <div class="footer_right">
+                <p class="footer_text">Contacto</p>
+                <p class="footer_text">Barrio Zudubiarte 01409, Okondo, Álava, España</p>
+            </div>
         </div>
     </footer>
     <script src="/mr-crock/scripts/script.js"></script>
 </body>
+
 </html>

@@ -19,30 +19,38 @@
 
 <body>
     <header>
-        <div class="header_left">
-            <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="">
-        </div>
-        <div class="header_right">
-            <nav class="menu_nav">
-                <ul class="menu_nav_items">
-                    <li><a href="./index.html">INICIO</a></li>
-                    <li><a href="./producto.html">PRODUCTOS</a></li>
-                    <li><a href="./clientes.html">CLIENTES</a></li>
-                </ul>
-                <span class="material-symbols-outlined menu-btn">menu</span>
-            </nav>
-            <a href="contacto.html" class="main_btn">CONTACTO</a>
+        <div class="container header_inner">
+            <div class="header_left">
+                <a class="logo_link" href="./index.html" aria-label="Mr. Crock - Inicio">
+                    <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="Mr. Crock">
+                </a>
+            </div>
+            <div class="header_right">
+                <nav class="menu_nav" aria-label="Navegación principal">
+                    <ul class="menu_nav_items" id="main-navigation">
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./producto.html">PRODUCTOS</a></li>
+                        <li><a href="./clientes.html">CLIENTES</a></li>
+                    </ul>
+                    <button class="material-symbols-outlined menu-btn" type="button"
+                        aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">menu</button>
+                </nav>
+                <a href="contacto.html" class="main_btn header_cta">CONTACTO</a>
+            </div>
         </div>
     </header>
     <main>
         <section class="hero">
-            <div class="hero_content">
-                <h1 class="hero_title">Mr.Crock</h1>
-                <h2 class="hero_text">Soluciones ready-to-eat para empresas, preparadas para servir a gran escala.</h2>
-                <strong class="hero_tags"> +35 años | Certificación IFS | 97% entregas en tiempo y forma | España y Europa</strong>
+            <div class="hero_content container">
+                <h1 class="hero_title">Soluciones ready-to-eat para empresas que operan a gran escala</h1>
+                <p class="hero_text">Fabricamos alimentos preparados refrigerados, listos para vender, servir o calentar en distintos canales profesionales.</p>
+                <strong class="hero_tags">+35 años | Certificación IFS | 97% entregas en tiempo y forma | España y Europa</strong>
+                <div class="hero_actions">
+                    <a class="main_btn hero_cta" href="./producto.html">VER PRODUCTOS</a>
+                </div>
             </div>
         </section>
-        <section class="two_column">
+        <section class="two_column container">
             <div class="column_left">
                 <h2 class="section_title">Nuestra <span>Historia</span></h2>
             </div>
@@ -57,7 +65,7 @@
                     que cada cliente necesita.</p>
             </div>
         </section>
-        <section class="four_cards">
+        <section class="four_cards container">
             <article class="card">
                 <h3 class="card_title">Somos… <b>Auténticos</b></h3>
                 <div class="thin_line"></div>
@@ -91,16 +99,17 @@
 
     </main>
     <footer>
-        <div class="footer_left">
-            <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
-        </div>
-        <div class="footer_center">
-            <p>Mr.Crock es una marca registrada de Catering de Suministros S.L.</p>
-
-        </div>
-        <div class="footer_right">
-            <p>Contact info</p>
-            <p>Barrio Zudubiarte 01409, Okondo, Álava, España</p>
+        <div class="container footer_inner">
+            <div class="footer_left">
+                <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
+            </div>
+            <div class="footer_center">
+                <p class="footer_text">Mr.Crock es una marca registrada de Catering de Suministros S.L.</p>
+            </div>
+            <div class="footer_right">
+                <p class="footer_text">Contacto</p>
+                <p class="footer_text">Barrio Zudubiarte 01409, Okondo, Álava, España</p>
+            </div>
         </div>
     </footer>
     <script src="/mr-crock/scripts/script.js"></script>

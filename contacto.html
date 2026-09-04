@@ -19,26 +19,31 @@
 
 <body>
     <header>
-        <div class="header_left">
-            <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="">
-        </div>
-        <div class="header_right">
-            <nav class="menu_nav">
-                <ul class="menu_nav_items">
-                    <li><a href="./index.html">INICIO</a></li>
-                    <li><a href="./producto.html">PRODUCTOS</a></li>
-                    <li><a href="./clientes.html">CLIENTES</a></li>
-                </ul>
-                <span class="material-symbols-outlined menu-btn">menu</span>
-            </nav>
-            <a href="contacto.html" class="main_btn">CONTACTO</a>
+        <div class="container header_inner">
+            <div class="header_left">
+                <a class="logo_link" href="./index.html" aria-label="Mr. Crock - Inicio">
+                    <img class="logo_header" src="assets/logo/MC-Logo-04.png" alt="Mr. Crock">
+                </a>
+            </div>
+            <div class="header_right">
+                <nav class="menu_nav" aria-label="Navegación principal">
+                    <ul class="menu_nav_items" id="main-navigation">
+                        <li><a href="./index.html">INICIO</a></li>
+                        <li><a href="./producto.html">PRODUCTOS</a></li>
+                        <li><a href="./clientes.html">CLIENTES</a></li>
+                    </ul>
+                    <button class="material-symbols-outlined menu-btn" type="button"
+                        aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">menu</button>
+                </nav>
+                <a href="contacto.html" class="main_btn header_cta">CONTACTO</a>
+            </div>
         </div>
     </header>
     <main>
         <section class="formularioContacto">
-            <div class="formularioBox">
+            <div class="formularioBox container">
 
-                <form class="formulario" action="#" method="post">
+                <form class="formulario" action="mailto:katrin@catersum.com?subject=Contacto%20web%20Mr.Crock" method="post" enctype="text/plain">
 
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -53,7 +58,7 @@
                     <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..."
                         required></textarea>
 
-                    <button class="mainBtn" type="submit">
+                    <button class="main_btn" type="submit">
                         ENVIAR MENSAJE
                     </button>
 
@@ -62,16 +67,17 @@
         </section>
     </main>
     <footer>
-        <div class="footer_left">
-            <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
-        </div>
-        <div class="footer_center">
-            <p>Mr.Crock es una marca registrada de Catering de Suministros S.L.</p>
-
-        </div>
-        <div class="footer_right">
-            <p>Contacto</p>
-            <p>Barrio Zudubiarte 01409, Okondo, Álava, España</p>
+        <div class="container footer_inner">
+            <div class="footer_left">
+                <img class="footer_logo" src="assets/logo/Sello/MC-Sello-04.png" alt="">
+            </div>
+            <div class="footer_center">
+                <p class="footer_text">Mr.Crock es una marca registrada de Catering de Suministros S.L.</p>
+            </div>
+            <div class="footer_right">
+                <p class="footer_text">Contacto</p>
+                <p class="footer_text">Barrio Zudubiarte 01409, Okondo, Álava, España</p>
+            </div>
         </div>
     </footer>
     <script src="/mr-crock/scripts/script.js"></script>

@@ -1,15 +1,8 @@
-html {
-    font-size: 16px;
-}
-
 .formularioContacto {
-    padding: 4rem 2rem;
-    display: flex;
-    justify-content: center;
+    padding-block: 4rem;
 }
 
 .formularioBox {
-    width: 100%;
     max-width: 40rem;
 }
 
@@ -21,6 +14,7 @@ html {
 
 .formulario input,
 .formulario textarea {
+    width: 100%;
     font-family: var(--fontBody);
     font-size: 1rem;
     padding: 0.75rem 1rem;
@@ -36,30 +30,24 @@ html {
 
 .formulario input:focus,
 .formulario textarea:focus {
-    outline: none;
-    border-color: var(--color-text);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-color: var(--color-primary);
 }
 
-.formulario button {
+.formulario .main_btn {
     margin-top: 1rem;
 }
 
-@media (max-width: 1024px) {
-
-}
-
 @media (max-width: 768px) {
-
-     .formularioContacto {
-        padding: 3rem 1.5rem;
+    .formularioContacto {
+        padding-block: 3rem;
     }
-
 }
 
 @media (max-width: 480px) {
-
     .formularioContacto {
-        padding: 2rem 1rem;
+        padding-block: 2rem;
     }
 
     .formularioBox {
@@ -72,14 +60,12 @@ html {
 
     .formulario input,
     .formulario textarea {
-        width: 100%;
         font-size: 1rem;
         padding: 0.75rem;
     }
 
-    .formulario button {
+    .formulario .main_btn {
         width: 100%;
         padding: 0.8rem 1rem;
     }
-
 }

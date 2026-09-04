@@ -1,12 +1,31 @@
-html{
-    font-size: 16px;
+.hero {
+    background-image: url("../assets/factory/factory 2.png");
+    background-position: center 70%;
 }
 
-.hero{
-    background-image: url("../assets/factory/main_hero.png");
+.hero_content {
+    max-width: 62rem;
 }
 
-.card{
+.hero_title {
+    line-height: 0.98;
+}
+
+.hero_text {
+    max-width: 52rem;
+}
+
+.hero_actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.hero_cta {
+    padding: 0.8rem 1.2rem;
+}
+
+.card {
     background-color: var(--color-bg-soft);
     width: 100%;
     height: auto;
@@ -16,47 +35,57 @@ html{
     justify-content: flex-start;
     text-align: center;
     padding: 1rem;
-    border: 1px;
+    border: 1px solid var(--color-border);
     border-radius: 0.2rem;
 }
 
-.card_title{
+.card_title {
     font-size: 2rem;
 }
 
-.four_cards{
+.four_cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding-block: 1rem 4rem;
     gap: 1rem;
 }
 
 @media (max-width: 1024px) {
     .four_cards {
         grid-template-columns: repeat(2, 1fr);
-        padding: 2rem;
         gap: 1rem;
     }
-
 }
 
 @media (max-width: 768px) {
     .four_cards {
         grid-template-columns: repeat(2, 1fr);
-        padding: 1.5rem;
+        padding-block: 1.5rem 3rem;
     }
 
     .card_title {
         font-size: 1.75rem;
     }
-
 }
 
 @media (max-width: 480px) {
+    .hero_title {
+        font-size: 2.55rem;
+    }
 
-     .four_cards {
+    .hero_tags {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero_cta {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .four_cards {
         grid-template-columns: 1fr;
-        padding: 1rem;
+        padding-block: 1rem 2.5rem;
         gap: 1rem;
     }
 
@@ -67,5 +96,4 @@ html{
     .card_title {
         font-size: 1.6rem;
     }
-
 }
