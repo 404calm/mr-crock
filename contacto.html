@@ -43,7 +43,9 @@
         <section class="formularioContacto">
             <div class="formularioBox container">
 
-                <form class="formulario" action="mailto:katrin@catersum.com?subject=Contacto%20web%20Mr.Crock" method="post" enctype="text/plain">
+                <form class="formulario" id="contact-form" action="https://formsubmit.co/ajax/katrin@catersum.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo contacto web - Mr.Crock">
+                    <input type="text" name="_honey" class="form_honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
@@ -61,6 +63,8 @@
                     <button class="main_btn" type="submit">
                         ENVIAR MENSAJE
                     </button>
+
+                    <p class="form_status" id="form-status" role="status" aria-live="polite"></p>
 
                 </form>
             </div>
@@ -80,6 +84,6 @@
             </div>
         </div>
     </footer>
-    <script src="/mr-crock/scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
 </body>
 </html>

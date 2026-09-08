@@ -69,3 +69,33 @@
         padding: 0.8rem 1rem;
     }
 }
+
+/* ---------- FORM SUBMISSION STATUS ---------- */
+.form_honeypot {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.form_status {
+    min-height: 1.5rem;
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form_status--success {
+    color: var(--color-olive);
+}
+
+.form_status--error {
+    color: var(--color-primary-hover);
+}
+
+.formulario .main_btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
