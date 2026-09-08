@@ -1,6 +1,6 @@
 .hero {
-    background-image: url("../assets/factory/factory 2.png");
-    background-position: center 70%;
+    background-image: url("../assets/factory/main_hero.png");
+    background-position: center 80%;
 }
 
 .hero_content {
@@ -41,6 +41,14 @@
 
 .card_title {
     font-size: 2rem;
+    line-height: 1.1;
+    min-height: 4.4rem;
+    text-align: center;
+}
+
+.card_title b {
+    display: block;
+    color: var(--color-primary-cta);
 }
 
 .four_cards {

@@ -1,5 +1,6 @@
 .hero {
-    background-image: url("../assets/factory/product_hero.jpg");
+    background-image: url("../assets/factory/product_hero.png");
+    background-position: center 80%;
 }
 
 /* ---------- B2B GENERAL CONSIDERATIONS ---------- */

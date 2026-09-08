@@ -23,7 +23,7 @@
 }
 
 .hero_text {
-    color: var(--color-primary-cta);
+    color: var(--color-bg);
     font-weight: var(--weightMedium);
     font-size: 2rem;
 }
