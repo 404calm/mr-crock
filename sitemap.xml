@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://www.mrcrock.es/</loc>
-    </url>
-
-    <url>
-        <loc>https://www.mrcrock.es/producto.html</loc>
-    </url>
-
-    <url>
-        <loc>https://www.mrcrock.es/clientes.html</loc>
-    </url>
-
-    <url>
-        <loc>https://www.mrcrock.es/contacto.html</loc>
-    </url>
-
+  <url><loc>https://mrcrock.es/</loc></url>
+  <url><loc>https://mrcrock.es/productos/</loc></url>
+  <url><loc>https://mrcrock.es/productos/bocadillos-clasicos/</loc></url>
+  <url><loc>https://mrcrock.es/productos/ready-to-eat/</loc></url>
+  <url><loc>https://mrcrock.es/productos/hamburguesa/</loc></url>
+  <url><loc>https://mrcrock.es/productos/sandwiches/</loc></url>
+  <url><loc>https://mrcrock.es/productos/paninis/</loc></url>
+  <url><loc>https://mrcrock.es/productos/focaccias/</loc></url>
+  <url><loc>https://mrcrock.es/productos/sweet-bite/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/vending/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/retail-supermercados/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/estaciones-servicio/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/eventos-festivales/</loc></url>
+  <url><loc>https://mrcrock.es/clientes/travel-transporte/</loc></url>
+  <url><loc>https://mrcrock.es/nosotros/</loc></url>
+  <url><loc>https://mrcrock.es/fabricacion/</loc></url>
+  <url><loc>https://mrcrock.es/fabricacion/calidad-seguridad-alimentaria/</loc></url>
+  <url><loc>https://mrcrock.es/contacto/</loc></url>
 </urlset>
