@@ -1,10 +1,75 @@
-.quality_intro { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; padding-block: 3rem 4rem; }
-.quality_intro h1 { font-size: clamp(3rem,7vw,5.25rem); }
-.quality_lead { max-width: 62ch; margin-top: 1rem; color: var(--color-text-muted); font-size: 1.1rem; }
-.ifs_badge { width: 12rem; aspect-ratio: 1; display: grid; place-content: center; padding: 1rem; border-radius: 50%; background: var(--color-light); border: 1px solid var(--color-border); text-align: center; box-shadow: var(--shadow); }
-.ifs_badge strong { display: block; color: #123d78; font-family: var(--font-body); font-size: 2.5rem; }
-.ifs_badge span { color: #123d78; font-size: .68rem; }
-.quality_grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; padding-bottom: 3rem; }
-.quality_grid article { padding: 1.5rem; border: 1px solid var(--color-border); background: var(--color-bg-soft); }
-.quality_grid h2 { margin-bottom: .75rem; font-size: 2rem; }
-@media (max-width: 700px) { .quality_intro { grid-template-columns: 1fr; } .ifs_badge { width: 9rem; } .quality_grid { grid-template-columns: 1fr; } }
+.quality_intro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    padding-block: 3rem 4rem;
+}
+
+.quality_intro h1 {
+    font-size: clamp(3rem, 7vw, 5.25rem);
+}
+
+.quality_lead {
+    max-width: 62ch;
+    margin-top: 1rem;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.ifs_badge {
+    width: 12rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+    border-radius: 50%;
+    background: var(--color-light);
+    border: 1px solid var(--color-border);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.ifs_badge strong {
+    display: block;
+    color: #123d78;
+    font-family: var(--font-body);
+    font-size: 2.5rem;
+}
+
+.ifs_badge span {
+    color: #123d78;
+    font-size: .68rem;
+}
+
+.quality_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.quality_grid article {
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-soft);
+}
+
+.quality_grid h2 {
+    margin-bottom: .75rem;
+    font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+    .quality_intro {
+        grid-template-columns: 1fr;
+    }
+
+    .ifs_badge {
+        width: 9rem;
+    }
+
+    .quality_grid {
+        grid-template-columns: 1fr;
+    }
+}

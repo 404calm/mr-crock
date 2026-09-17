@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://mrcrock.es/clientes/vending/">
   <meta property="og:image" content="https://mrcrock.es/assets/factory/main_hero.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="/assets/logo/Favicon/16px/MC-Favicon-02.jpg">
+  <link rel="icon" type="image/jpg" href="/assets/brand/favicon/mrcrock-favicon-32px-rojo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -30,25 +30,75 @@
 <body>
   <header class="site_header">
     <div class="container header_inner">
+
       <div class="header_left">
         <a class="logo_link" href="/" aria-label="Mr. Crock - Inicio">
           <img class="logo_header" src="/assets/logo/MC-Logo-04.png" alt="Mr. Crock">
         </a>
       </div>
+
       <div class="header_right">
+
         <nav class="menu_nav" aria-label="Navegación principal">
+
           <ul class="menu_nav_items" id="main-navigation">
-            <li><a href="/">INICIO</a></li>
+            <li><a href="/" aria-current="page">INICIO</a></li>
             <li><a href="/productos/">PRODUCTOS</a></li>
-            <li><a href="/clientes/" aria-current="page">CLIENTES</a></li>
+            <li><a href="/clientes/">CLIENTES</a></li>
             <li><a href="/nosotros/">NOSOTROS</a></li>
             <li><a href="/fabricacion/">FABRICACIÓN</a></li>
           </ul>
+
           <button class="material-symbols-outlined menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"
-            aria-controls="main-navigation">menu</button>
+            aria-controls="main-navigation">
+            menu
+          </button>
+
         </nav>
-        <a href="/contacto/" class="main_btn header_cta">CONTACTO</a>
+
+        <div class="language_selector">
+
+          <button class="language_btn" type="button" aria-label="Cambiar idioma" aria-expanded="false"
+            aria-controls="language-menu">
+            <span class="material-symbols-outlined">
+              language
+            </span>
+
+            <span class="current_language">ES</span>
+
+            <span class="material-symbols-outlined language_arrow">
+              expand_more
+            </span>
+          </button>
+
+
+          <div class="language_menu" id="language-menu" role="menu">
+
+            <a href="#" data-lang="es" hreflang="es" role="menuitem">
+              <span>ES</span>
+              Español
+            </a>
+
+            <a href="#" data-lang="en" hreflang="en" role="menuitem">
+              <span>EN</span>
+              English
+            </a>
+
+            <a href="#" data-lang="fr" hreflang="fr" role="menuitem">
+              <span>FR</span>
+              Français
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="/contacto/" class="main_btn header_cta">
+          CONTACTO
+        </a>
+
       </div>
+
     </div>
   </header>
   <main>
