@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       menuButton.setAttribute("aria-expanded", "false");
       menuButton.setAttribute("aria-label", "Abrir menú");
-
-      menuButton.textContent = "menu";
     };
 
 
@@ -34,9 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "aria-label",
         open ? "Cerrar menú" : "Abrir menú"
       );
-
-      menuButton.textContent =
-        open ? "close" : "menu";
 
     });
 
@@ -155,6 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================================================
      FORMULARIO DE CONTACTO
+     Sin JS el formulario se envía de forma nativa a FormSubmit y
+     redirige a /contacto/gracias/. Con JS se valida en línea y se
+     envía por AJAX.
      ========================================================= */
 
   const form = document.querySelector("#contact-form");
@@ -168,14 +166,112 @@ document.addEventListener("DOMContentLoaded", () => {
     const submit =
       form.querySelector('button[type="submit"]');
 
+    const nextField =
+      form.querySelector('input[name="_next"]');
+
+    const nextUrl =
+      nextField ? nextField.value : "/contacto/gracias/";
+
+    const ajaxAction =
+      form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+
+
+    /* Precarga el motivo desde la URL: /contacto/?motivo=muestras */
+
+    const motivoParam =
+      new URLSearchParams(window.location.search).get("motivo");
+
+    const motivos = {
+      llamada: "Llamada con ventas",
+      muestras: "Muestras",
+      pedido: "Pedido"
+    };
+
+    if (motivoParam && motivos[motivoParam]) {
+
+      const radio = form.querySelector(
+        `input[name="motivo"][value="${motivos[motivoParam]}"]`
+      );
+
+      if (radio) {
+        radio.checked = true;
+      }
+
+    }
+
+
+    /* Validación accesible en línea */
+
+    form.noValidate = true;
+
+    const errorMessages = {
+      nombre: "Escribe tu nombre.",
+      empresa: "Indica el nombre de tu empresa.",
+      email: "Escribe un email válido, por ejemplo nombre@empresa.com.",
+      canal: "Selecciona el canal en el que vendes.",
+      mensaje: "Cuéntanos brevemente qué necesitas."
+    };
+
+    const validateField = (field) => {
+
+      const error =
+        document.getElementById(`${field.id}-error`);
+
+      const valid = field.checkValidity();
+
+      field.setAttribute("aria-invalid", String(!valid));
+
+      if (error) {
+        error.textContent = valid ? "" : (errorMessages[field.name] || "Revisa este campo.");
+      }
+
+      return valid;
+
+    };
+
+    const requiredFields =
+      Array.from(form.querySelectorAll("[required]"));
+
+    requiredFields.forEach(field => {
+
+      field.addEventListener("blur", () => {
+
+        if (field.value) {
+          validateField(field);
+        }
+
+      });
+
+      field.addEventListener("input", () => {
+
+        if (field.getAttribute("aria-invalid") === "true") {
+          validateField(field);
+        }
+
+      });
+
+    });
+
 
     form.addEventListener("submit", async (event) => {
 
       event.preventDefault();
 
 
-      if (!form.reportValidity()) {
+      const invalid =
+        requiredFields.filter(field => !validateField(field));
+
+      if (invalid.length) {
+
+        invalid[0].focus();
+
+        if (status) {
+          status.textContent = "Revisa los campos marcados.";
+          status.className = "form_status form_status--error";
+        }
+
         return;
+
       }
 
 
@@ -184,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       submit.disabled = true;
-      submit.textContent = "ENVIANDO…";
+      submit.textContent = "Enviando…";
 
 
       if (status) {
@@ -198,7 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
 
         const response = await fetch(
-          form.action,
+          ajaxAction,
           {
             method: "POST",
 
@@ -220,18 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        form.reset();
-
-
-        if (status) {
-
-          status.textContent =
-            "Mensaje enviado correctamente. Nos pondremos en contacto contigo lo antes posible.";
-
-          status.className =
-            "form_status form_status--success";
-
-        }
+        window.location.assign(nextUrl);
 
       }
 
@@ -240,16 +325,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (status) {
 
           status.textContent =
-            "No hemos podido enviar el mensaje. Escríbenos a katrin@catersum.com o inténtalo de nuevo.";
+            "No hemos podido enviar tu solicitud. Llámanos al +34 684 812 408 o escríbenos a katrin@catersum.com.";
 
           status.className =
             "form_status form_status--error";
 
         }
-
-      }
-
-      finally {
 
         submit.disabled = false;
         submit.textContent = originalText;
@@ -321,7 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       burgers: {
-        es: "/productos/hamburguesa/",
+        es: "/productos/hamburguesas-&-hotdogs/",
         en: "/en/products/burgers/",
         fr: "/fr/produits/burgers/"
       },

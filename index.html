@@ -4,68 +4,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("js")</script>
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <title>Fabricante de comida preparada refrigerada B2B | Mr. Crock</title>
+  <title>Fabricante de bocadillos y sándwiches refrigerados B2B | Mr. Crock</title>
   <meta name="description"
-    content="Fabricamos soluciones ready-to-eat y alimentación preparada refrigerada para retail, vending, estaciones de servicio, eventos, travel y foodservice.">
+    content="Fabricante con certificación IFS en Álava: bocadillos y sándwiches refrigerados para retail, vending, eventos y festivales. Entrega en 72 h en la Península.">
   <meta name="author" content="Mr. Crock">
   <meta name="publisher" content="Mr. Crock">
   <meta name="keywords" content="comida preparada, alimentación preparada, ready-to-eat, vending, retail, supermercados, estaciones de servicio, travel, transporte, eventos, festivales, foodservice">
   <link rel="canonical" href="https://mrcrock.es/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Fabricante de comida preparada refrigerada B2B | Mr. Crock">
+  <meta property="og:site_name" content="Mr. Crock">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Fabricante de bocadillos y sándwiches refrigerados B2B | Mr. Crock">
   <meta property="og:description"
-    content="Fabricamos soluciones ready-to-eat y alimentación preparada refrigerada para retail, vending, estaciones de servicio, eventos, travel y foodservice.">
+    content="Fabricante con certificación IFS en Álava: bocadillos y sándwiches refrigerados para retail, vending, eventos y festivales. Entrega en 72 h en la Península.">
   <meta property="og:url" content="https://mrcrock.es/">
   <meta property="og:image" content="https://mrcrock.es/assets/hero/detector-metales-alimentario.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/jpg" href="/assets/brand/favicon/mrcrock-favicon-32px-rojo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,800;1,400;1,600&family=Lexend+Deca:wght@400;500;600;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="icon" type="image/jpeg" href="/assets/brand/favicon/mrcrock-favicon-32px-rojo.jpg">
+  <link rel="preload" href="/assets/fonts/lexend-deca-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/hero/detector-metales-alimentario.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="/style/global.css">
   <link rel="stylesheet" href="/style/components.css">
   <link rel="stylesheet" href="/style/index.css">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Mr. Crock",
-  "url": "https://mrcrock.es/",
-  "logo": "https://mrcrock.es/assets/brand/logo/mrcrock-logo-rojo.png",
-  "description": "Fabricante B2B de alimentación preparada refrigerada y soluciones ready-to-eat.",
-  "email": "katrin@catersum.com",
-  "telephone": "+34 684 812 408",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Barrio Zudubiarte",
-    "postalCode": "01409",
-    "addressLocality": "Okondo",
-    "addressRegion": "Álava",
-    "addressCountry": "ES"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "telephone": "+34 684 812 408",
-    "email": "katrin@catersum.com",
-    "areaServed": [
-      "ES",
-      "EU"
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://mrcrock.es/#organization",
+      "name": "Mr. Crock",
+      "legalName": "Catering de Suministros S.L.",
+      "url": "https://mrcrock.es/",
+      "logo": "https://mrcrock.es/assets/brand/logo/mrcrock-logo-rojo.png",
+      "description": "Fabricante B2B de bocadillos y sándwiches refrigerados, con certificación IFS, para retail, vending, estaciones de servicio, eventos y transporte.",
+      "email": "katrin@catersum.com",
+      "telephone": "+34 684 812 408",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barrio Zudubiarte",
+        "postalCode": "01409",
+        "addressLocality": "Okondo",
+        "addressRegion": "Álava",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        "ES",
+        "EU"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "name": "Katrin López de Madariaga",
+        "telephone": "+34 684 812 408",
+        "email": "katrin@catersum.com",
+        "areaServed": [
+          "ES",
+          "EU"
+        ],
+        "availableLanguage": [
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://mrcrock.es/#website",
+      "url": "https://mrcrock.es/",
+      "name": "Mr. Crock",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://mrcrock.es/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mrcrock.es/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué fabrica Mr. Crock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mr. Crock fabrica en Okondo (Álava) bocadillos, sándwiches, paninis, focaccias, hamburguesas, hot dogs y bollería rellena refrigerados, listos para vender o calentar, para empresas de retail, vending, estaciones de servicio, eventos y transporte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto dura un bocadillo envasado de Mr. Crock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entre 11 y 21 días en refrigeración (0–4 °C), según la referencia, gracias al envasado en atmósfera protectora. Las referencias aptas pueden congelarse y durar hasta un año."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el pedido mínimo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomendamos un pedido de aproximadamente 100 unidades para optimizar los gastos de envío. Para proyectos con volúmenes específicos, lo estudiamos con tu equipo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En cuánto tiempo entregáis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entregamos en toda la Península en un máximo de 72 horas. En 2025, el 97 % de los pedidos llegaron en tiempo y forma. También servimos a clientes en Europa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué certificación de seguridad alimentaria tenéis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mr. Crock cuenta con certificación IFS, el estándar internacional de seguridad alimentaria que exige la gran distribución, y trabaja con envasado en atmósfera protectora y cadena de frío entre 0 y 4 °C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Podéis suministrar a un festival o evento con mucha demanda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajamos para eventos y festivales con picos de demanda concentrados: referencias de consumo directo para puntos sin horno, formatos fáciles de servir en varias barras y la posibilidad de congelar el excedente en las referencias aptas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo pedir muestras antes de hacer un pedido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cuéntanos tu canal y volumen aproximado en el formulario de contacto o llama al +34 684 812 408 y el equipo comercial te propondrá las referencias y muestras adecuadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Desarrolláis productos a medida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Con nuestro servicio de Food Design adaptamos recetas, formatos y envases al canal, a la ocasión de consumo y a la preparación disponible en el punto de venta."
+          }
+        }
+      ]
+    }
+  ]
 }</script>
 </head>
 
 <body>
+  <a class="skip_link" href="#contenido">Saltar al contenido</a>
   <header class="site_header">
     <div class="container header_inner">
 
       <div class="header_left">
         <a class="logo_link" href="/" aria-label="Mr. Crock - Inicio">
-          <img class="logo_header" src="/assets/brand/logo/mrcrock-logo-rojo.png" alt="Mr. Crock">
+          <img class="logo_header" src="/assets/brand/logo/mrcrock-logo-rojo-web.webp" width="640" height="141" alt="Mr. Crock">
         </a>
       </div>
 
@@ -81,10 +176,8 @@
             <li><a href="/fabricacion/">FABRICACIÓN</a></li>
           </ul>
 
-          <button class="material-symbols-outlined menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"
-            aria-controls="main-navigation">
-            menu
-          </button>
+          <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="main-navigation"><svg class="icon icon_menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon icon_close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 
         </nav>
 
@@ -93,17 +186,13 @@
           <button class="language_btn" type="button" aria-label="Cambiar idioma" aria-expanded="false"
             aria-controls="language-menu">
 
-            <span class="material-symbols-outlined">
-              language
-            </span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3C9.5 5.6 8.2 8.6 8.2 12s1.3 6.4 3.8 9"/></svg>
 
             <span class="current_language">
               ES
             </span>
 
-            <span class="material-symbols-outlined language_arrow">
-              expand_more
-            </span>
+            <svg class="icon language_arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
 
           </button>
 
@@ -137,79 +226,158 @@
 
     </div>
   </header>
-  <main>
+  <main id="contenido">
 
     <section class="hero hero--home">
       <div class="hero_content container">
-        <p class="hero_eyebrow">Fabricación alimentaria B2B</p>
-        <h1 class="hero_title">Soluciones ready-to-eat para empresas</h1>
-        <p class="hero_lead">Productos preparados listos para vender, servir o calentar en canales profesionales.</p>
+        <p class="hero_eyebrow">Fabricante B2B · Okondo, Álava</p>
+        <h1 class="hero_title">Bocadillos y sándwiches listos para vender</h1>
+        <p class="hero_lead">Producción diaria con certificación IFS para cadenas de retail, vending, estaciones de servicio y
+          festivales. Entrega en 72&nbsp;h en toda la Península.</p>
         <div class="hero_actions">
-          <a class="main_btn" href="/productos/">Ver productos</a>
-          <a class="secondary_btn" href="/contacto/">Habla con nosotros</a>
+          <a class="main_btn" href="/contacto/">Habla con ventas</a>
+          <a class="secondary_btn" href="/contacto/?motivo=muestras">Pide muestras</a>
         </div>
-        <div class="hero_tags" aria-label="Credenciales principales">
-          <span>+35 años</span><span>Certificación IFS</span><span>97% entregas en tiempo y forma</span><span>Península
-            y Europa</span>
-        </div>
+        <ul class="hero_tags" aria-label="Credenciales principales">
+          <li>+35 años</li><li>Certificación IFS</li><li>97&nbsp;% de entregas en tiempo y forma</li><li>Península y Europa</li>
+        </ul>
       </div>
     </section>
     <section class="intro_section container">
       <p class="section_kicker">Made fresh. Ready to serve.</p>
-      <h2 class="section_title">Comida preparada para operaciones que necesitan <span>consistencia, seguridad y
-          flexibilidad</span></h2>
-      <p class="section_intro">Mr. Crock ayuda a empresas a lanzar, escalar y operar ofertas de comida ready-to-eat con
-        producción diaria, soluciones adaptadas al canal y una vida útil optimizada.</p>
+      <h2 class="section_title">Hecho cada día. <span>Listo para servir.</span></h2>
+      <p class="section_intro">Mr. Crock es un fabricante familiar de comida preparada refrigerada. Elaboramos bocadillos,
+        sándwiches, paninis y focaccias cada día en nuestra fábrica de Álava, los envasamos en atmósfera protectora y los
+        entregamos listos para vender, servir o calentar, con una vida útil de hasta 21 días en frío.</p>
+    </section>
+    <section class="channel_split container" aria-labelledby="home-channels-title">
+      <p class="section_kicker">Para quién fabricamos</p>
+      <h2 class="section_title" id="home-channels-title">Constancia para tu lineal. Capacidad para tu pico.</h2>
+      <div class="channel_split_grid">
+        <article class="channel_card">
+          <h3>Retail &amp; supermercados</h3>
+          <p>Para cadenas que necesitan el mismo producto, en todas sus tiendas, todas las semanas.</p>
+          <ul>
+            <li>Certificación IFS y fichas técnicas por referencia</li>
+            <li>Vida útil de 11 a 21 días en frío para reducir mermas</li>
+            <li>Entrega en 72&nbsp;h en toda la Península</li>
+            <li>Desarrollo de recetas y formatos para tu categoría</li>
+          </ul>
+          <a class="text_link" href="/clientes/retail-supermercados/">Soluciones para retail →</a>
+        </article>
+        <article class="channel_card">
+          <h3>Eventos &amp; festivales</h3>
+          <p>Para operaciones con miles de servicios en pocos días y sin margen para quedarse sin producto.</p>
+          <ul>
+            <li>Capacidad para demandas concentradas en periodos cortos</li>
+            <li>Referencias de consumo directo para barras sin horno</li>
+            <li>Formatos fáciles de repartir entre varios puntos de venta</li>
+            <li>Excedente congelable en las referencias aptas</li>
+          </ul>
+          <a class="text_link" href="/clientes/eventos-festivales/">Soluciones para eventos →</a>
+        </article>
+      </div>
     </section>
     <section class="home_products container" aria-labelledby="home-products-title">
       <div class="section_heading_row">
         <div>
           <p class="section_kicker">Productos</p>
-          <h2 class="section_title" id="home-products-title">Una gama para distintos momentos de consumo</h2>
+          <h2 class="section_title" id="home-products-title">Una gama para cada momento de consumo</h2>
         </div>
         <a class="text_link" href="/productos/">Ver catálogo →</a>
       </div>
       <div class="mini_card_grid">
-        <a class="mini_card" href="/productos/bocadillos-clasicos/"><img
-            src="/assets/product/clasicos/bocadillo-bacon-queso-partido.webp" alt="Bocadillos clásicos Mr. Crock"
-            loading="lazy"><span>Bocadillos clásicos</span></a>
-        <a class="mini_card" href="/productos/ready-to-eat/"><img src="/assets/product/ready_to_eat/ready-to-eat.webp"
-            alt="Bocadillos ready-to-eat Mr. Crock" loading="lazy"><span>Ready-to-eat</span></a>
-        <a class="mini_card" href="/productos/sandwiches/"><img src="/assets/product/sandwiches/sandwiches.webp"
-            alt="Sándwiches preparados Mr. Crock" loading="lazy"><span>Sándwiches</span></a>
-        <a class="mini_card" href="/productos/paninis/"><img src="/assets/product/paninis/panini-lateral.webp"
-            alt="Paninis preparados Mr. Crock" loading="lazy"><span>Paninis</span></a>
+        <a class="mini_card" href="/productos/bocadillos-clasicos/"><img decoding="async" width="1400" height="1050" src="/assets/product/clasicos/bocadillo-bacon-queso-partido.webp"
+            alt="Bocadillo de bacon y queso partido por la mitad" loading="lazy"><span>Bocadillos clásicos</span></a>
+        <a class="mini_card" href="/productos/ready-to-eat/"><img decoding="async" width="1400" height="934" src="/assets/product/ready_to_eat/ready-to-eat.webp"
+            alt="Bocadillo ready-to-eat" loading="lazy"><span>Ready-to-eat</span></a>
+        <a class="mini_card" href="/productos/sandwiches/"><img decoding="async" width="1400" height="658" src="/assets/product/sandwiches/sandwiches.webp"
+            alt="Sándwiches preparados" loading="lazy"><span>Sándwiches</span></a>
+        <a class="mini_card" href="/productos/paninis/"><img decoding="async" width="1400" height="933" src="/assets/product/paninis/panini-lateral.webp"
+            alt="Panini preparado visto de lado" loading="lazy"><span>Paninis</span></a>
       </div>
     </section>
     <section class="home_sectors">
       <div class="container">
         <p class="section_kicker">Sectores</p>
-        <h2 class="section_title">Soluciones diseñadas para el canal en el que vendes</h2>
+        <h2 class="section_title">Pensado para el canal en el que vendes</h2>
         <div class="sector_link_grid">
+          <a href="/clientes/retail-supermercados/">Retail &amp; supermercados</a>
+          <a href="/clientes/eventos-festivales/">Eventos &amp; festivales</a>
           <a href="/clientes/vending/">Vending</a>
-          <a href="/clientes/retail-supermercados/">Retail & supermercados</a>
           <a href="/clientes/estaciones-servicio/">Estaciones de servicio</a>
-          <a href="/clientes/eventos-festivales/">Eventos & festivales</a>
-          <a href="/clientes/travel-transporte/">Travel & transporte</a>
+          <a href="/clientes/travel-transporte/">Travel &amp; transporte</a>
         </div>
+        <p class="home_sectors_more">¿Tu canal no aparece? <a href="/contacto/">Cuéntanos tu operación</a>.</p>
+      </div>
+    </section>
+    <section class="facts_band" aria-labelledby="home-facts-title">
+      <div class="container">
+        <p class="section_kicker">Datos operativos</p>
+        <h2 id="home-facts-title">Lo que puedes esperar de nosotros</h2>
+        <dl class="facts_grid">
+          <div><dt>97&nbsp;%</dt><dd>de los pedidos llegaron en tiempo y forma en 2025</dd></div>
+          <div><dt>72&nbsp;h</dt><dd>plazo máximo de entrega en la Península</dd></div>
+          <div><dt>21 días</dt><dd>de vida útil en frío, según referencia; hasta 1 año congelado</dd></div>
+          <div><dt>IFS</dt><dd>certificación internacional de seguridad alimentaria</dd></div>
+          <div><dt>~100 uds.</dt><dd>pedido mínimo recomendado para optimizar el envío</dd></div>
+        </dl>
       </div>
     </section>
     <section class="process_preview container">
-      <div class="process_preview_media"><img src="/assets/images/bocadillos-ibericos-stacked.webp"
-          alt="Línea de producción de Mr. Crock" loading="lazy"></div>
+      <div class="process_preview_media"><img decoding="async" width="1400" height="933" src="/assets/images/bocadillos-ibericos-stacked.webp"
+          alt="Bocadillos ibéricos apilados" loading="lazy"></div>
       <div class="process_preview_copy">
         <p class="section_kicker">Fabricación</p>
-        <h2 class="section_title">Del contexto del cliente al producto listo para vender</h2>
+        <h2 class="section_title">De tu necesidad al producto en el lineal</h2>
         <p>Combinamos elaboración artesanal, ingeniería alimentaria, estándares internacionales de seguridad y logística
-          eficiente. Desde nuestra fábrica en Álava desarrollamos soluciones a medida y las producimos diariamente.</p>
+          eficiente. Estudiamos tu canal, diseñamos la receta y el formato, y lo producimos a diario en nuestra fábrica de Álava.</p>
         <a class="text_link" href="/fabricacion/">Conoce nuestra fabricación →</a>
+      </div>
+    </section>
+    <section class="faq_section container" aria-labelledby="home-faq-title">
+      <p class="section_kicker">Preguntas frecuentes</p>
+      <h2 class="section_title" id="home-faq-title">Lo que nos preguntan antes de empezar</h2>
+      <div class="faq_list">
+        <details>
+          <summary>¿Qué fabrica Mr. Crock?</summary>
+          <p>Mr. Crock fabrica en Okondo (Álava) bocadillos, sándwiches, paninis, focaccias, hamburguesas, hot dogs y bollería rellena refrigerados, listos para vender o calentar, para empresas de retail, vending, estaciones de servicio, eventos y transporte.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto dura un bocadillo envasado de Mr. Crock?</summary>
+          <p>Entre 11 y 21 días en refrigeración (0–4 °C), según la referencia, gracias al envasado en atmósfera protectora. Las referencias aptas pueden congelarse y durar hasta un año.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el pedido mínimo?</summary>
+          <p>Recomendamos un pedido de aproximadamente 100 unidades para optimizar los gastos de envío. Para proyectos con volúmenes específicos, lo estudiamos con tu equipo.</p>
+        </details>
+        <details>
+          <summary>¿En cuánto tiempo entregáis?</summary>
+          <p>Entregamos en toda la Península en un máximo de 72 horas. En 2025, el 97 % de los pedidos llegaron en tiempo y forma. También servimos a clientes en Europa.</p>
+        </details>
+        <details>
+          <summary>¿Qué certificación de seguridad alimentaria tenéis?</summary>
+          <p>Mr. Crock cuenta con certificación IFS, el estándar internacional de seguridad alimentaria que exige la gran distribución, y trabaja con envasado en atmósfera protectora y cadena de frío entre 0 y 4 °C.</p>
+        </details>
+        <details>
+          <summary>¿Podéis suministrar a un festival o evento con mucha demanda?</summary>
+          <p>Sí. Trabajamos para eventos y festivales con picos de demanda concentrados: referencias de consumo directo para puntos sin horno, formatos fáciles de servir en varias barras y la posibilidad de congelar el excedente en las referencias aptas.</p>
+        </details>
+        <details>
+          <summary>¿Puedo pedir muestras antes de hacer un pedido?</summary>
+          <p>Sí. Cuéntanos tu canal y volumen aproximado en el formulario de contacto o llama al +34 684 812 408 y el equipo comercial te propondrá las referencias y muestras adecuadas.</p>
+        </details>
+        <details>
+          <summary>¿Desarrolláis productos a medida?</summary>
+          <p>Sí. Con nuestro servicio de Food Design adaptamos recetas, formatos y envases al canal, a la ocasión de consumo y a la preparación disponible en el punto de venta.</p>
+        </details>
       </div>
     </section>
     <section class="cta_band">
       <div class="container cta_band_inner">
         <div>
-          <p class="section_kicker">¿Tienes un proyecto?</p>
-          <h2>Cuéntanos qué necesitas.</h2>
+          <p class="section_kicker">¿Hablamos?</p>
+          <h2>Cuéntanos tu canal y tu volumen. Te llamamos.</h2>
         </div>
         <a class="main_btn main_btn--light" href="/contacto/">Habla con ventas</a>
       </div>
@@ -218,12 +386,13 @@
   <footer class="site_footer">
     <div class="container footer_inner">
       <div class="footer_left">
-        <img class="footer_logo" src="/assets/brand/sello/mrcrock-sello-blanco.png" alt="Logo version sello | Mr.Crock">
+        <img class="footer_logo" src="/assets/brand/sello/mrcrock-sello-blanco-web.webp" width="320" height="249" alt="Sello Mr. Crock Calidad Premium" loading="lazy" decoding="async">
       </div>
       <div class="footer_center">
         <p>Mr. Crock es una marca registrada de Catering de Suministros S.L.</p>
         <p><a href="/nosotros/">Nosotros</a> · <a href="/fabricacion/calidad-seguridad-alimentaria/">Calidad y
             seguridad</a></p>
+        <p class="footer_legal"><a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad y cookies</a></p>
       </div>
       <div class="footer_right">
         <p><strong>Contacto comercial</strong></p>

@@ -14,10 +14,9 @@
 }
 
 .header_left {
-  height: 3rem;
-  overflow: hidden;
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .logo_link {
@@ -27,7 +26,7 @@
 
 .logo_header {
   width: auto;
-  height: 8rem;
+  height: 2.75rem;
   object-fit: contain;
 }
 
@@ -51,14 +50,31 @@
 }
 
 .menu_nav_items a {
-  color: var(--color-primary);
+  color: var(--color-primary-cta);
   font-size: .95rem;
   font-weight: var(--weight-semibold);
 }
 
 .menu_nav_items a:hover,
 .menu_nav_items a[aria-current="page"] {
-  color: var(--color-primary-cta);
+  color: var(--color-primary-hover);
+}
+
+.menu_nav_items a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .35em;
+}
+
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .menu-btn {
@@ -71,8 +87,17 @@
   border: 0;
   background: transparent;
   color: var(--color-primary-cta);
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   cursor: pointer;
+}
+
+.menu-btn .icon_close,
+.menu-btn[aria-expanded="true"] .icon_menu {
+  display: none;
+}
+
+.menu-btn[aria-expanded="true"] .icon_close {
+  display: block;
 }
 
 .main_btn,
@@ -87,14 +112,25 @@
   font-size: .92rem;
   font-weight: var(--weight-semibold);
   letter-spacing: .055em;
+  text-align: center;
   text-transform: uppercase;
   transition: .2s ease;
+}
+
+.cta_band .main_btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .main_btn {
   border: 1px solid var(--color-primary-cta);
   background: var(--color-primary-cta);
   color: var(--color-light);
+}
+
+.main_btn:active,
+.secondary_btn:active {
+  transform: translateY(0);
 }
 
 .main_btn:hover {
@@ -129,7 +165,9 @@
 }
 
 .hero {
-  min-height: 58vh;
+  position: relative;
+  isolation: isolate;
+  min-height: min(58vh, 44rem);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,7 +176,16 @@
   text-align: center;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(rgba(30, 24, 20, .5), rgba(30, 24, 20, .38));
+}
+
 .hero_content {
+  padding-block: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,7 +235,7 @@
   text-shadow: 0 1px 4px rgba(0, 0, 0, .7);
 }
 
-.hero_tags span+span::before {
+.hero_tags li+li::before {
   content: "·";
   margin-right: 1.1rem;
 }
@@ -318,16 +365,23 @@
 }
 
 .footer_left {
-  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .footer_logo {
-  height: 7rem;
+  height: 4.5rem;
   width: auto;
+}
+
+.footer_legal {
+  margin-top: .5rem;
+}
+
+.site_footer a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .footer_center,
@@ -365,14 +419,14 @@
 
     padding: 0 0.65rem;
 
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-text-muted);
     border-radius: 6px;
 
     background: transparent;
 
     color: var(--color-text);
 
-    font-family: var(--fontBody);
+    font-family: var(--font-body);
     font-size: 0.8rem;
     font-weight: 600;
 
@@ -389,12 +443,9 @@
     border-color: var(--color-primary);
 }
 
-.language_btn .material-symbols-outlined {
-    font-size: 1.25rem;
-}
-
 .language_arrow {
-    font-size: 1rem !important;
+    width: 1rem;
+    height: 1rem;
 
     transition: transform 0.2s ease;
 }
@@ -458,7 +509,7 @@
 
     color: var(--color-text);
 
-    font-family: var(--fontBody);
+    font-family: var(--font-body);
     font-size: 0.8rem;
     font-weight: 500;
 
@@ -493,12 +544,11 @@
 
 
 .language_menu a.active::after {
-    content: "check";
+    content: "\2713";
 
     margin-left: auto;
 
-    font-family: "Material Symbols Outlined";
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 @media (max-width: 1024px) {
@@ -524,11 +574,25 @@
     gap: .55rem;
   }
 
-  .menu_nav_items {
+  .js .menu_nav_items {
     display: none;
   }
 
-  .menu_nav_items.menu_open {
+  /* Sin JS el menú se muestra en línea, bajo la cabecera */
+  html:not(.js) .header_inner {
+    grid-template-columns: 1fr;
+  }
+
+  html:not(.js) .header_right {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  html:not(.js) .menu_nav_items {
+    flex-wrap: wrap;
+  }
+
+  .js .menu_nav_items.menu_open {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -548,7 +612,7 @@
     padding: .65rem .5rem;
   }
 
-  .menu-btn {
+  .js .menu-btn {
     display: flex;
   }
 
@@ -588,13 +652,8 @@
     width: min(calc(100% - 2rem), var(--container-max));
   }
 
-  .header_left {
-    height: 2.75rem;
-    min-width: 0;
-  }
-
   .logo_header {
-    height: 6rem;
+    height: 2.1rem;
     max-width: 100%;
   }
 
@@ -604,9 +663,8 @@
   }
 
   .menu-btn {
-    min-width: 2.45rem;
-    min-height: 2.45rem;
-    font-size: 1.9rem;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
   }
 
   .hero {

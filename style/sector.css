@@ -7,7 +7,7 @@
 }
 
 .sector_intro h1 {
-    font-size: clamp(3.25rem, 7vw, 5.5rem);
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
 }
 
 .sector_lead {

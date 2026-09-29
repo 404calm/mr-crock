@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add("js")</script>
   <meta name="robots" content="index, follow, max-image-preview:large">
   <title>Nosotros: historia, proceso y valores | Mr. Crock</title>
   <meta name="description"
@@ -13,31 +14,31 @@
   <meta name="keywords" content="comida preparada, alimentación preparada, ready-to-eat, vending, retail, supermercados, estaciones de servicio, travel, transporte, eventos, festivales, foodservice">
   <link rel="canonical" href="https://mrcrock.es/nosotros/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mr. Crock">
+  <meta property="og:locale" content="es_ES">
   <meta property="og:title" content="Nosotros: historia, proceso y valores | Mr. Crock">
   <meta property="og:description"
     content="Conoce la historia, el proceso y los valores de Mr. Crock, empresa familiar especializada en soluciones ready-to-eat para empresas.">
   <meta property="og:url" content="https://mrcrock.es/nosotros/">
   <meta property="og:image" content="https://mrcrock.es/assets/hero/camion-reparto-mrcrock.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/jpg" href="/assets/brand/favicon/mrcrock-favicon-32px-rojo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,800;1,400;1,600&family=Lexend+Deca:wght@400;500;600;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+  <link rel="icon" type="image/jpeg" href="/assets/brand/favicon/mrcrock-favicon-32px-rojo.jpg">
+  <link rel="preload" href="/assets/fonts/lexend-deca-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/eb-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/hero/camion-reparto-mrcrock.webp" as="image" fetchpriority="high">
   <link rel="stylesheet" href="/style/global.css">
   <link rel="stylesheet" href="/style/components.css">
   <link rel="stylesheet" href="/style/nosotros.css">
 </head>
 
 <body>
+  <a class="skip_link" href="#contenido">Saltar al contenido</a>
   <header class="site_header">
     <div class="container header_inner">
 
       <div class="header_left">
         <a class="logo_link" href="/" aria-label="Mr. Crock - Inicio">
-          <img class="logo_header" src="/assets/brand/logo/mrcrock-logo-rojo.png" alt="Mr. Crock">
+          <img class="logo_header" src="/assets/brand/logo/mrcrock-logo-rojo-web.webp" width="640" height="141" alt="Mr. Crock">
         </a>
       </div>
 
@@ -46,17 +47,15 @@
         <nav class="menu_nav" aria-label="Navegación principal">
 
           <ul class="menu_nav_items" id="main-navigation">
-            <li><a href="/" aria-current="page">INICIO</a></li>
+            <li><a href="/">INICIO</a></li>
             <li><a href="/productos/">PRODUCTOS</a></li>
             <li><a href="/clientes/">CLIENTES</a></li>
-            <li><a href="/nosotros/">NOSOTROS</a></li>
+            <li><a href="/nosotros/" aria-current="page">NOSOTROS</a></li>
             <li><a href="/fabricacion/">FABRICACIÓN</a></li>
           </ul>
 
-          <button class="material-symbols-outlined menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"
-            aria-controls="main-navigation">
-            menu
-          </button>
+          <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false"
+            aria-controls="main-navigation"><svg class="icon icon_menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon icon_close" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 
         </nav>
 
@@ -64,15 +63,11 @@
 
           <button class="language_btn" type="button" aria-label="Cambiar idioma" aria-expanded="false"
             aria-controls="language-menu">
-            <span class="material-symbols-outlined">
-              language
-            </span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3C9.5 5.6 8.2 8.6 8.2 12s1.3 6.4 3.8 9"/></svg>
 
             <span class="current_language">ES</span>
 
-            <span class="material-symbols-outlined language_arrow">
-              expand_more
-            </span>
+            <svg class="icon language_arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
           </button>
 
 
@@ -105,7 +100,7 @@
 
     </div>
   </header>
-  <main>
+  <main id="contenido">
 
     <section class="hero hero--about">
       <div class="hero_content container">
@@ -117,13 +112,10 @@
     <section class="two_column container">
       <div class="column_left">
         <p class="section_kicker">Mr. Crock</p>
-        <h2 class="section_title">Nuestra <span>historia</span></h2>
+        <h2 class="section_title">Nuestra<span> historia</span></h2>
       </div>
       <div class="column_right">
-        <p>Mr. Crock es una plataforma alimentaria ready-to-eat que permite a empresas lanzar, escalar y operar ofertas
-          de comida de forma rentable, segura y flexible. Como empresa familiar, elaboramos productos con estándares
-          internacionales de seguridad alimentaria, combinando sabor auténtico, personalización y eficiencia operativa.
-        </p>
+        <p>Mr. Crock es un fabricante familiar de comida preparada refrigerada con sede en Okondo (Álava). Desde hace más de 35 años elaboramos bocadillos, sándwiches, paninis y focaccias para empresas que necesitan vender comida lista para consumir de forma rentable, segura y constante, con certificación IFS y la dedicación de una empresa familiar.</p>
         <p>Creamos soluciones a medida, con producción diaria y vida útil optimizada. Entregamos en la Península y
           Europa productos listos para vender y consumir, diseñados para adaptarse a lo que cada cliente necesita.</p>
       </div>
@@ -137,7 +129,7 @@
             técnica y conocimiento del sector para convertir esas necesidades en productos listos para vender.</p>
           <p>Acompañamos el proyecto hasta la entrega y seguimos optimizando procesos y productos a medida que
             evoluciona la operación.</p><a class="text_link" href="/fabricacion/">Ver fabricación →</a>
-        </div><img src="/assets/images/linea-de-envasado-al vacio.webp" alt="Proceso de fabricación de Mr. Crock" loading="lazy">
+        </div><img decoding="async" width="1366" height="2048" src="/assets/images/linea-de-envasado-al vacio.webp" alt="Proceso de fabricación de Mr. Crock" loading="lazy">
       </div>
     </section>
     <section class="values_section container">
@@ -178,12 +170,13 @@
   <footer class="site_footer">
     <div class="container footer_inner">
       <div class="footer_left">
-        <img class="footer_logo" src="/assets/brand/sello/mrcrock-sello-blanco.png" alt="Logo version sello | Mr.Crock">
+        <img class="footer_logo" src="/assets/brand/sello/mrcrock-sello-blanco-web.webp" width="320" height="249" alt="Sello Mr. Crock Calidad Premium" loading="lazy" decoding="async">
       </div>
       <div class="footer_center">
         <p>Mr. Crock es una marca registrada de Catering de Suministros S.L.</p>
         <p><a href="/nosotros/">Nosotros</a> · <a href="/fabricacion/calidad-seguridad-alimentaria/">Calidad y
             seguridad</a></p>
+        <p class="footer_legal"><a href="/aviso-legal/">Aviso legal</a> · <a href="/privacidad/">Privacidad y cookies</a></p>
       </div>
       <div class="footer_right">
         <p><strong>Contacto comercial</strong></p>

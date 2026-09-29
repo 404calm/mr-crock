@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /contacto/gracias/
 
-Sitemap: https://www.mrcrock.es/sitemap.xml
+Sitemap: https://mrcrock.es/sitemap.xml

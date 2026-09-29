@@ -32,13 +32,13 @@
 
 .ifs_badge strong {
     display: block;
-    color: #123d78;
+    color: var(--color-olive);
     font-family: var(--font-body);
     font-size: 2.5rem;
 }
 
 .ifs_badge span {
-    color: #123d78;
+    color: var(--color-olive);
     font-size: .68rem;
 }
 
