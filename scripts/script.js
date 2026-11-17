@@ -150,9 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =========================================================
      FORMULARIO DE CONTACTO
-     Sin JS el formulario se envía de forma nativa a FormSubmit y
-     redirige a /contacto/gracias/. Con JS se valida en línea y se
-     envía por AJAX.
+     Sin JS el formulario se envía de forma nativa a Web3Forms y
+     redirige a /contacto/gracias/ (campo "redirect"). Con JS se
+     valida en línea y se envía por fetch.
      ========================================================= */
 
   const form = document.querySelector("#contact-form");
@@ -167,13 +167,12 @@ document.addEventListener("DOMContentLoaded", () => {
       form.querySelector('button[type="submit"]');
 
     const nextField =
-      form.querySelector('input[name="_next"]');
+      form.querySelector('input[name="redirect"]');
 
     const nextUrl =
       nextField ? nextField.value : "/contacto/gracias/";
 
-    const ajaxAction =
-      form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+    const ajaxAction = form.action;
 
 
     /* Precarga el motivo desde la URL: /contacto/?motivo=muestras */
@@ -307,10 +306,13 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        if (!response.ok) {
+        const data =
+          await response.json().catch(() => ({}));
+
+        if (!response.ok || !data.success) {
 
           throw new Error(
-            "No se pudo enviar el formulario"
+            data.message || "No se pudo enviar el formulario"
           );
 
         }
